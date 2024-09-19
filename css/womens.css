@@ -1,0 +1,244 @@
+/* womens.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Rubik',sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+:root {
+    --primary-color: #ff69b4;
+    --secondary-color: #f8bbd0;
+    --accent-color: #c2185b;
+}
+
+.women-hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.women-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.women-hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.featured-categories {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(194, 24, 91, 0.8);
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.trending-products {
+    padding: 4rem 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 70%;
+    height: 50%;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: var(--accent-color);
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 1rem 1rem;
+}
+
+.product-card .btn {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: var(--accent-color);
+}
+
+.seasonal-collection {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+}
+
+.collection-slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.collection-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.collection-slider img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 1rem;
+}
+
+.size-guide {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.size-chart {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.style-inspiration {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+}
+
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.inspiration-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.inspiration-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.inspiration-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: var(--accent-color);
+}
+
+.inspiration-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+.inspiration-card .read-more {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.inspiration-card .read-more:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .women-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .women-hero p {
+        font-size: 1.2rem;
+    }
+
+    .category-grid,
+    .product-grid,
+    .inspiration-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

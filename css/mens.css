@@ -1,0 +1,240 @@
+/* mens.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Rubik',sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.men-hero {
+    background-image: url('../images/men/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.men-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.men-hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.featured-categories {
+    padding: 4rem 0;
+    background-color: #ccc;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.trending-products {
+    padding: 4rem 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e44d26;
+    margin: 0 1rem 1rem;
+}
+
+.product-card .btn {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.75rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #e44d26;
+}
+
+.featured-brands {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+}
+
+.brand-slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.brand-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.brand-slider img {
+    max-width: 150px;
+    height: auto;
+    margin: 0 1rem;
+}
+
+.size-guide {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.size-chart {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.style-tips {
+    padding: 4rem 0;
+    background-color: #f8f8f8;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tip-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tip-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.tip-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+.tip-card .read-more {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    color: #e44d26;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tip-card .read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .men-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .men-hero p {
+        font-size: 1.2rem;
+    }
+
+    .category-grid,
+    .product-grid,
+    .tips-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
